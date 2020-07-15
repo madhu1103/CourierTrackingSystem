@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<nav class="navbar navbar-default navbar fixed-top" id="navb">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" id="logo"><b>V2V Courier Services</b></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="UserHome.jsp" id="text"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+      <li class="dropdown">
+      
+      <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="Package">Package</a>
+      <ul class="dropdown-menu" role="menu">
+  
+      <li><a href="UserViewPackages.jsp">My Packages</a>
+      <li><a href="UserTrackPackage.jsp">Package Tracking</a>
+      </ul>
+      <li><a href="UserViewRules" id="rules">View Rules/Policies</a></li>
+      
+    </ul>
+    
+    
+    <ul class="nav navbar-nav navbar-right">
+    <form action="LogOut" method="get">
+     <li><button type="submit" class="btn btn-info btn-lg" value="Logout"><span class="glyphicon glyphicon-log-out"></span> Log out</button></form></li>
+    </ul>
+    
+    
+  </div>
+</nav>
+
+</body>
+</html>

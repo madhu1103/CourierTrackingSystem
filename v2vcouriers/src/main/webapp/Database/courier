@@ -1,0 +1,25 @@
+create table user(First_Name varchar(50),Last_Name varchar(50),Gender varchar(10),Email varchar(50),Contact_Number int(10),UserId varchar(15),Customer_Id bigint(8) unique Auto_Increment,
+Password varchar(15),constraint PK_UserId primary key(UserId));
+alter table user add Customer_Id bigint(8) unique Auto_Increment;
+ALTER TABLE user AUTO_INCREMENT=1001;
+
+
+create table Staff(First_Name varchar(50),Last_Name varchar(50),Gender varchar(10),Email varchar(50),Contact_Number int(10),UserId varchar(15),Password varchar(15),Salary int(10),Designation varchar(15),Permanent_Address varchar(100),Correspondance_Address varchar(100),Login_Type varchar(1),constraint PK_UserId primary key(UserId));
+alter table staff modify column contact_number bigint not null;
+alter table staff add Employee_Id bigint(8) unique Auto_Increment;
+ALTER TABLE staff AUTO_INCREMENT=10000001;
+
+
+create table Package(Consignment_Id int(8),Accept_Date date,Present_Date date,
+Package_Weight float(4),Cost float(5),Sender_Address varchar(100),Receiver_Address varchar(100),Employee_id bigint(8),Customer_id bigint(8),
+Current_Location varchar(100),Package_Status varchar(50),constraint PK_ConsignmentId primary key(Consignment_Id),
+Foreign Key(employee_id) references staff(employee_id));
+alter table package modify column customer_id bigint(8);
+alter table package add Foreign key(customer_id) references user(customer_id);
+alter table package add Present_Date date;
+a
+
+
+create table rules(SNo int(3),Rule varchar(500));
+alter table rules modify column SNo int(3) unique auto_increment;
+alter table rules modify column rule varchar(500) unique;
